@@ -1,30 +1,45 @@
-let ladoCuadrado = 5;
-let perimetroCuadrado = ladoCuadrado * 4;
-let areaCuadrado = ladoCuadrado * ladoCuadrado;
 
-console.group("Cuadrado");
-console.log(`El perimetro del cuadrado es igual a ${perimetroCuadrado} y su area es igual a ${areaCuadrado} cuadrados`);
-console.groupEnd();
+function perimetroCuadrado(lado) {
+    return lado * 4;
+}
 
-let lado1Triangulo = 6;
-let lado2Triangulo = 6;
-let baseTriangulo = 4;
-let alturaTriangulo = 5.5;
+function areaCuadrado(lado) {
+    return lado * lado;
+}
 
-let perimetroTriangulo = lado1Triangulo + lado2Triangulo + baseTriangulo;
-let areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
+function perimetroTriangulo(lado1, lado2, base) {
+    return lado1 + lado2 + base;
+}
 
-console.group("Triangulo")
-console.log(`Los lados del triangulo miden ${lado1Triangulo}cm y su base mide ${baseTriangulo}cm`);
-console.log(`El perimetro del triangulo es ${perimetroCuadrado}cm y su area es de ${areaTriangulo}cm`);
-console.groupEnd()
+function areaTriangulo(base, altura) {
+    return (base * altura) / 2;
+}
 
-let radioCirculo = 4;
-let diametro = radioCirculo * 2;
-let PI = Math.PI;
-let perimetroCirculo = diametro * PI;
-let areaCirculo = radioCirculo * radioCirculo * PI;
+function diametroCirculo(radio) {
+    return radio * 2;
+}
 
-console.group("Circulo");
-console.log(`El perimetro del circulo es igual a ${perimetroCirculo}cm y su area es igual a ${areaCirculo}cm`);
-console.groupEnd();
+function perimetroCirculo(radio) {
+    let diametro = diametroCirculo(radio);
+    return diametro * Math.PI;
+}
+
+function areaCirculo(radio) {
+    return (radio * radio) * Math.PI;
+}
+
+// Interactuando con html
+
+function calcularPerimetroCuadrado() {
+    let input = document.getElementById('ladoCuadrado');
+    let value = input.value;
+    let perimetro = perimetroCuadrado(value);
+    alert(`El valor del perimetro del cuadrado es igual a ${perimetro}cm`)
+}
+
+function calcularAreaCuadrado() {
+    let input = document.getElementById('ladoCuadrado');
+    let value = input.value;
+    let area = areaCuadrado(value);
+    alert(`El valor del Area del cuadrado es igual a ${area}cm`)
+}
