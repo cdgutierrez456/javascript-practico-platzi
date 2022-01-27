@@ -13,8 +13,9 @@
     <header class="header">
         <h1>Curso practico JavaScript</h1>
     </header>
-    <main>
+    <main class="container">
         <section class="cuadrado">
+            <h2>Calculo de Cuadrado</h2>
             <form action="">
                 <label for="ladoCuadrado">
                     <span>Escribe la medida de cada lado del cuadrado</span>
@@ -22,6 +23,24 @@
                 </label>
                 <button type="button" onclick="calcularAreaCuadrado()">Calcular area</button>
                 <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perimetro</button>
+            </form>
+        </section>
+        <section class="triangulo">
+            <h2>Calculo de Triangulo</h2>
+            <form action="">
+                <label for="lado1Triangulo">
+                    <span>Escribe el primer lado del triangulo</span>
+                    <input type="number" id="lado1Triangulo" required>
+                </label>
+                <label for="lado2Triangulo">
+                    <span>Segundo lado del triangulo</span>
+                    <input type="number" id="lado2Triangulo" required>
+                </label>
+                <label for="baseTriangulo">
+                    <span>Base del Triangulo</span>
+                    <input type="number" id="baseTriangulo">
+                </label>
+                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Area</button>
             </form>
         </section>
     </main>

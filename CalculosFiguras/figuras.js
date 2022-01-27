@@ -43,3 +43,11 @@ function calcularAreaCuadrado() {
     let area = areaCuadrado(value);
     alert(`El valor del Area del cuadrado es igual a ${area}cm`)
 }
+
+function calcularPerimetroTriangulo() {
+    let lado1 = document.getElementById('lado1Triangulo').value;
+    let lado2 = document.getElementById('lado2Triangulo').value;
+    let base = document.getElementById('baseTriangulo').value;
+    let perimetro = perimetroTriangulo(lado1, lado2, base);
+    alert(`El valor del perimetro del Triangulo es igual a ${perimetro}`);
+}
